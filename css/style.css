@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap');
+
+:root {
+  --shadow-main:  0px 4px 4px rgba(0, 0, 0, 0.25), 
+                  0px 188px 52px rgba(0, 0, 0, 0.01), 
+                  0px 120px 48px rgba(0, 0, 0, 0.04),
+                  0px 68px 41px rgba(0, 0, 0, 0.15), 
+                  0px 30px 30px rgba(0, 0, 0, 0.26), 
+                  0px 8px 17px rgba(0, 0, 0, 0.29),
+                  inset 0px 6px 8px rgba(255, 255, 255, 0.1), 
+                  inset 0px -4px 5px rgba(0, 0, 0, 0.22);
+  --shadow-button:  0px 11px 7px rgba(0, 0, 0, 0.01), 
+                    0px 7px 7px rgba(0, 0, 0, 0.04), 
+                    0px 4px 6px rgba(0, 0, 0, 0.1),
+                    0px 2px 4px rgba(0, 0, 0, 0.26), 
+                    0px 0px 2px rgba(0, 0, 0, 0.29), 
+                    inset 0px 2px 3px rgba(255, 255, 255, 0.06);
+  --bg-body: linear-gradient(180deg, hsl(242, 45%, 65%) 0%, hsl(252, 45%, 65%) 100%);
+  --bg-calculator: hsl(254, 13%, 19%);
+  --button-gray: linear-gradient(180deg, rgba(0, 0, 0, 0.05) 0%, rgba(255, 255, 255, 0.05) 100%), hsl(254, 13%, 19%);
+  --button-violet: linear-gradient(180deg, rgba(0, 0, 0, 0.05) 0.01%, rgba(255, 255, 255, 0.05) 100%), hsl(263, 50%, 31%);
+  --button-purple: linear-gradient(180deg, rgba(0, 0, 0, 0.15) 0%, rgba(255, 255, 255, 0.05) 100%), hsl(262, 73%, 58%);
+  --button-hover: linear-gradient(180deg, rgba(0, 0, 0, 0.15) 0%, rgba(255, 255, 255, 0.05) 100%), hsl(262, 73%, 58%);
+  --text-primary: hsl(0, 0%, 92%);
+  --text-secondary: hsl(262, 94%, 67%);
+  --text-insert: hsl(0, 0%, 42%);
+  --font-main: 'Rubik', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-main);
+  outline: none;
+  border: none;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+body {
+  background: var(--bg-body);
+}
+
+.container {
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+  padding: 0 1.5rem;
+}
+
+.calculator {
+  background: var(--bg-calculator);
+  box-shadow: var(--shadow-main);
+  border-radius: 3rem;
+  padding: 3.375rem 2rem 2rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.625rem;
+}
+
+.display {
+  padding-inline: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-width: 18.25rem;
+}
+
+.insert__value {
+  width: 100%;
+  height: 1.75rem;
+  font-weight: 400;
+  font-size: 0.9rem;
+  line-height: 140%;
+  text-align: right;
+  letter-spacing: 0.1rem;
+  color: var(--text-insert);
+  background-color: transparent;
+}
+
+.result {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.result__value {
+  width: 100%;
+  height: 3.1495rem;
+  font-weight: 400;
+  font-size: 1.188rem;
+  line-height: 140%;
+  text-align: right;
+  color: var(--text-primary);
+  background-color: transparent;
+}
+
+.keyboard {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 0.75rem;
+}
+
+.keyboard__button {
+  width: 4rem;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--button-gray);
+  box-shadow: var(--shadow-button);
+  border-radius: 62.438rem;
+  cursor: pointer;
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 1.75rem;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+  transition: all 0.3s ease-in-out;
+}
+
+.keyboard__button:hover {
+  background: var(--button-hover);
+  transform: scale(1.030);
+}
+
+.keyboard__button:nth-child(1) {
+  color: var(--text-secondary);
+}
+
+.keyboard__button:nth-child(1):hover {
+  color: var(--text-primary);
+}
+
+.keyboard__button:nth-child(19) {
+  font-size: 2.25rem;
+}
+
+.keyboard__button--violet {
+  background: var(--button-violet);
+}
+
+.keyboard__button--purple {
+  background: var(--button-purple);
+}
+
+@media (max-width: 410px) {
+  .keyboard__button {
+    width: 3.2rem;
+    height: 3.2rem;
+  }
+
+  .calculator {
+    padding: 2.5rem 1.8rem 2rem 1.8rem;
+  }
+
+  .display {
+    padding-inline: 0.7rem;
+  }
+}
