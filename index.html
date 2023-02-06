@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link Favicon -->
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Calculator</title>
+  </head>
+  <body>
+    <main class="container">
+      <div class="calculator">
+        <!-- Container Display -->
+        <div class="display">
+          <div class="insert">
+            <input class="insert__value" type="text" disabled>
+          </div>
+
+          <div class="result">
+            <img class="result__image" src="./images/equal-display.svg" alt="">
+            <input class="result__value" type="text" disabled>
+          </div>
+        </div>
+        <!-- Container Keyboard -->
+        <div class="keyboard">
+          <button class="keyboard__button cancel">CE</button>
+          <button class="keyboard__button clear">C</button>
+          <button class="keyboard__button data" data-num="%"><img src="./images/percent.svg" alt="" data-num="%"/></button>
+          <button class="keyboard__button keyboard__button--violet data" data-num="/"><img src="./images/divide.svg" alt="" data-num="/"/></button>
+          <button class="keyboard__button data" data-num="7">7</button>
+          <button class="keyboard__button data" data-num="8">8</button>
+          <button class="keyboard__button data" data-num="9">9</button>
+          <button class="keyboard__button keyboard__button--violet data" data-num="*"><img src="./images/mult.svg" alt="" data-num="*"/></button>
+          <button class="keyboard__button data" data-num="4">4</button>
+          <button class="keyboard__button data" data-num="5">5</button>
+          <button class="keyboard__button data" data-num="6">6</button>
+          <button class="keyboard__button keyboard__button--violet data" data-num="-"><img src="./images/minus.svg" alt="" data-num="-"/></button>
+          <button class="keyboard__button data" data-num="1">1</button>
+          <button class="keyboard__button data" data-num="2">2</button>
+          <button class="keyboard__button data" data-num="3">3</button>
+          <button class="keyboard__button keyboard__button--violet data" data-num="+"><img src="./images/plus.svg" alt="" data-num="+"/></button>
+          <button class="keyboard__button negative"><img src="./images/plus-minus.svg" alt=""/></button>
+          <button class="keyboard__button data" data-num="0">0</button>
+          <button class="keyboard__button data" data-num=".">,</button>
+          <button class="keyboard__button keyboard__button--purple equal"><img src="./images/equal.svg" alt=""/></button>
+        </div>
+      </div>
+    </main>
+    <!-- Link Javascript -->
+    <script src="./js/script.js"></script>
+  </body>
+</html>
